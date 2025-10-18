@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_menu_edit">@android:drawable/ic_menu_edit</drawable>
+    <drawable name="ic_menu_delete">@android:drawable/ic_menu_delete</drawable>
+</resources>

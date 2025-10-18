@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66C29E">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#616161"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:text="Bodyweight Journal"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#AD000000"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/tableScrollView">
+
+        <TextView
+            android:id="@+id/textTableHeaderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="Date"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textTableHeaderWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Weight (lbs)"
+            android:textColor="#FFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Placeholder
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5" />
+    </TableRow>
+
+    <ScrollView
+        android:id="@+id/tableScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="150dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/scrollableView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#B4FFFFFF"
+
+            android:layout_marginBottom="32dp"
+            android:visibility="visible">
+
+            <TableLayout
+                android:id="@+id/tableWeightData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textDataDate1"
+                        android:layout_width="125dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="July 29"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textDataWeight1"
+                        android:layout_width="145dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="165.3 lb"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="0.3"
+                        android:background="#00BCD4"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:textColor="#FFFFFF" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#C62A2A"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textDataDate2"
+                        android:layout_width="125dp"
+                        android:layout_height="62dp"
+                        android:gravity="center"
+                        android:text="July 28"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textDataWeight2"
+                        android:layout_width="145dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="165.2 lb"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#00BCD4"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:textColor="#FFFFFF" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#C62A2A"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textDataDate3"
+                        android:layout_width="125dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="July 27"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textDataWeight3"
+                        android:layout_width="145dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="165.4 lb"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#00BCD4"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:textColor="#FFFFFF" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#C62A2A"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/textDataDate4"
+                        android:layout_width="125dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="July 26"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textDataWeight4"
+                        android:layout_width="145dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="165.5 lb"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#00BCD4"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_edit"
+                        android:textColor="#FFFFFF" />
+
+                    <ImageButton
+                        android:layout_weight="0.3"
+                        android:background="#C62A2A"
+                        android:padding="4dp"
+                        android:src="@android:drawable/ic_menu_delete"
+                        android:textColor="#FFFFFF" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonAddEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#689F38"
+        android:text="+"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableScrollView" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#9F3B38"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
